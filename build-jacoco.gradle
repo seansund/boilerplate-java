@@ -1,0 +1,23 @@
+apply plugin: "jacoco"
+
+jacoco { 
+	reportsDir = file("${buildDir}/reports/jacoco")
+}
+
+jacocoTestReport {
+	dependsOn test
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+
+task applicationCodeCoverageReport(type:JacocoReport){
+    executionData test
+    sourceSets sourceSets.main
+}
+
+build { 
+	dependsOn jacocoTestReport
+}
