@@ -9,7 +9,8 @@ apply from: "${rootProject.projectDir}/libraries.gradle"
 /* -------------------------------- */
 /* - Include other gradle scripts - */
 /* -------------------------------- */
-apply from: "${rootProject.projectDir}/build-java.gradle"
+//apply from: "${rootProject.projectDir}/build-java.gradle"
+apply from: "${rootProject.projectDir}/build-war.gradle"
 apply from: "${rootProject.projectDir}/build-groovy.gradle"
 apply from: "${rootProject.projectDir}/build-maven.gradle"
 apply from: "${rootProject.projectDir}/build-eclipse.gradle"
