@@ -12,7 +12,7 @@ import org.junit.Test;
 
 public class StringUtilTest2 {
 
-	@Test public void constructor() { 
+	@Test public void constructor() {
 		assertNotNull new StringUtil()
 	}
 	@Test public void isNull_Null() {
